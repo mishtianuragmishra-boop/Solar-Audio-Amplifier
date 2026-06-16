@@ -1,0 +1,12 @@
+* source SOLAR-AUDIO-AMPLIFIER
+R_R1         N00163 0  1k TC=0,0 
+R_R2         0 N00163  1k TC=0,0 
+V_V1         N00163 0 10Vdc
+I_I1         0 N00439 DC 1Adc  
+D_D1         N00163 N00439 D1N4007 
+V_V2         N00875 0 1Vdc
+R_R3         N00875 N00882  1k TC=0,0 
+D_D2         N00882 0 D1N4007 
+I_I2         0 0 DC 1Adc  
+V_V3         N01314 0 1Vdc
+D_D3         N01314 0 D1N4007 
