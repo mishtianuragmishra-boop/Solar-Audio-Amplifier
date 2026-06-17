@@ -19,7 +19,28 @@ Design and simulate a solar-powered audio amplifier by developing photovoltaic c
   - Diode
 - Generated initial photovoltaic response curves
 - Documented simulation results
+  
+Conclusion:
+Successfully built and simulated a basic solar-cell model in PSpice. The project setup and initial testing were completed.
 
+
+- Built the basic single-diode photovoltaic cell model in PSpice.
+- Added a photocurrent source and diode.
+- Performed DC sweep simulations.
+- Generated initial I-V plots.
+- Learned how to use simulation profiles and graph outputs in PSpice.
+
+Conclusion:
+Successfully created and simulated a basic photovoltaic cell model.
+
+- Added series resistance (Rs) and shunt resistance (Rsh) to the PV model.
+- Tested different resistance values and observed their effect on the circuit.
+- Connected a load resistor (RL) to create an output terminal.
+- Performed an irradiance sweep by varying photocurrent from 0.1 A to 1.0 A.
+- Observed output voltage increase from approximately 0.81 V to 0.96 V.
+
+Conclusion:
+The PV model responded correctly to increasing irradiance. Higher illumination produced higher output voltage.
 ## Repository Structure
 
 ```
