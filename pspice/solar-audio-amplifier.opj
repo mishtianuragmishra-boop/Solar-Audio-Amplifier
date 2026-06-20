@@ -7,11 +7,189 @@
     (File ".\solar-audio-amplifier.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
-    (CompileFileAddedOrDeleted "x"))
-  (Folder "Outputs")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\solar-audio-amplifier-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
   (Folder "PSpice Resources"
-    (Folder "Simulation Profiles")
-    (Folder "Model Libraries")
-    (Folder "Stimulus Files")
-    (Folder "Include Files"))
-  (DefaultLibraryBrowseDirectory "library\PSpice"))
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\pvcell1.sim"
+        (DisplayName "SCHEMATIC1-pvcell1")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\pvcell.sim"
+        (DisplayName "SCHEMATIC1-pvcell")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\pvcell11.sim"
+        (DisplayName "SCHEMATIC1-pvcell11")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\oui.sim"
+        (DisplayName "SCHEMATIC1-oui")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\o.sim"
+        (DisplayName "SCHEMATIC1-o")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\oo.sim"
+        (DisplayName "SCHEMATIC1-oo")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\pv.sim"
+        (DisplayName "SCHEMATIC1-PV")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\pv3.sim"
+        (DisplayName "SCHEMATIC1-pv3")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\pv33.sim"
+        (DisplayName "SCHEMATIC1-pv33")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\day3.sim"
+        (DisplayName "SCHEMATIC1-day3")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\day4.sim"
+        (DisplayName "SCHEMATIC1-day4")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\solar-audio-amplifier-pspicefiles\schematic1\generator.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\solar-audio-amplifier-pspicefiles\schematic1\generator.sim"
+        (DisplayName "SCHEMATIC1-generator")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (D1N4007
+      (FullPartName "D1N4007.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "Lenovo")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\Lenovo\Desktop\pspice project\solar-audio-amplifier.dsn")
+      (Path "Design Resources"
+         "C:\Users\Lenovo\Desktop\pspice project\solar-audio-amplifier.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "C:\Users\Lenovo\Desktop\pspice project\solar-audio-amplifier.dsn"
+         "Design Cache")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\Lenovo\Desktop\pspice project\solar-audio-amplifier.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 182"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1178 52 273")
+        (Scroll "-54 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\LENOVO\DESKTOP\PSPICE PROJECT\SOLAR-AUDIO-AMPLIFIER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 910 78 299")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\LENOVO\DESKTOP\PSPICE PROJECT\SOLAR-AUDIO-AMPLIFIER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE2"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 832 0 221")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\LENOVO\DESKTOP\PSPICE PROJECT\SOLAR-AUDIO-AMPLIFIER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE3"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 26 1152 26 247")
+        (Scroll "-54 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\LENOVO\DESKTOP\PSPICE PROJECT\SOLAR-AUDIO-AMPLIFIER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE4"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1178 52 273")
+        (Scroll "82 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\LENOVO\DESKTOP\PSPICE PROJECT\SOLAR-AUDIO-AMPLIFIER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE5")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\SPB_17.2\tools\capture\library\pspice"))
