@@ -1,79 +1,186 @@
-# Solar-Audio-Amplifier
-Photovoltaic cell modelling, power conditioning, and audio amplifier simulation in PSpice.
 # Solar Audio Amplifier
 
-A personal engineering project exploring photovoltaic modeling and low-power audio amplification using PSpice.
+A personal electronics and power-systems engineering project focused on designing a solar-powered audio amplifier from the ground up. The project combines photovoltaic modelling, power conditioning, energy conversion, and audio amplification using circuit simulation tools.
+
+---
+
+## Project Overview
+
+The objective is to design a complete low-power audio system powered by a photovoltaic source.
+
+The project is divided into four major subsystems:
+
+1. Photovoltaic Cell Modelling
+2. Power Conditioning and Voltage Conversion
+3. Audio Amplifier Design
+4. System Integration and Performance Analysis
+
+All development is currently being performed through circuit simulation before hardware implementation.
+
+---
+
+## Current Progress
+
+### Phase 1 – Photovoltaic Modelling ✅
+
+Completed development of a photovoltaic equivalent circuit model using:
+
+* Photocurrent source
+* Diode model
+* Series resistance (Rs)
+* Shunt resistance (Rsh)
+* Variable load resistance
+
+Activities completed:
+
+* Built a basic single-diode solar-cell model
+* Performed DC sweep simulations
+* Generated I-V characteristics
+* Investigated effects of irradiance variation
+* Studied effects of series and shunt resistance
+* Verified expected photovoltaic behaviour
+
+Key observations:
+
+* Increased irradiance increased output voltage and current
+* Series resistance reduced output performance
+* Shunt resistance affected leakage behaviour
+* Simulated results matched expected solar-cell characteristics
+
+---
+
+### Phase 2 – Power Conditioning ✅
+
+Developed and validated a boost-converter stage intended to increase photovoltaic output voltage for downstream circuitry.
+
+Converter topology:
+
+* Input source
+* Inductor
+* MOSFET switch
+* Schottky diode
+* Output capacitor
+* Load resistor
+
+Activities completed:
+
+* Initial design in PSpice
+* Migration to LTspice for debugging and validation
+* Replacement of generic switching components with realistic models
+* Verification of switching behaviour
+* Observation of boost-converter voltage step-up operation
+* Analysis of inductor current and output voltage response
+
+Simulation results demonstrated:
+
+* Successful voltage boosting above source voltage
+* Expected switching waveforms
+* Proper energy transfer through the inductor-diode network
+* Stable converter operation after component adjustments
+
+---
+
+### Phase 3 – Audio Amplifier Design 🔄
+
+Planned work:
+
+* Small-signal amplifier stage
+* Power amplification stage
+* Input coupling and filtering
+* Bias network design
+* Gain analysis
+* Frequency response characterization
+
+---
+
+### Phase 4 – System Integration ⏳
+
+Future work:
+
+* Connect photovoltaic model to boost converter
+* Connect boost converter to amplifier stage
+* Evaluate overall efficiency
+* Investigate noise and ripple effects
+* Simulate varying irradiance conditions
+* Analyze real-world operating scenarios
+
+---
+
+## Simulation Tools
+
+### PSpice
+
+Used for:
+
+* Initial photovoltaic modelling
+* DC sweep analysis
+* Early-stage circuit development
+
+### LTspice
+
+Used for:
+
+* Power electronics simulation
+* Boost converter validation
+* Switching waveform analysis
+* Circuit debugging
+
+### Git & GitHub
+
+Used for:
+
+* Version control
+* Engineering documentation
+* Progress tracking
+* Design archiving
+
+---
+
+## Repository Structure
+
+```text
+docs/
+    Engineering notes
+    Daily progress logs
+    Design documentation
+
+pspice/
+    PSpice schematics
+    Project files
+    Simulation profiles
+
+ltspice/
+    LTspice schematics
+    Converter validation files
+
+results/
+    Plots
+    Screenshots
+    Analysis figures
+```
+
+---
+
+## Current Status
+
+| Subsystem                  | Status      |
+| -------------------------- | ----------- |
+| Solar Cell Model           | Complete    |
+| Irradiance Analysis        | Complete    |
+| PV Characterization        | Complete    |
+| Boost Converter Design     | Complete    |
+| Boost Converter Validation | Complete    |
+| Audio Amplifier Design     | In Progress |
+| System Integration         | Pending     |
+
+---
 
 ## Project Goal
 
-Design and simulate a solar-powered audio amplifier by developing photovoltaic circuit models, analyzing their electrical behavior, and integrating them with amplifier stages.
+Design a fully simulated solar-powered audio amplifier system capable of converting photovoltaic energy into amplified audio output through an integrated power-conditioning stage.
 
-## Progress Log
+---
 
-### Day 1
-- Created GitHub repository
-- Set up PSpice project environment
-- Simulated diode I-V characteristics using DC sweep analysis
-- Built a basic solar-cell equivalent circuit using:
-  - Current source
-  - Diode
-- Generated initial photovoltaic response curves
-- Documented simulation results
-  
-Conclusion:
-Successfully built and simulated a basic solar-cell model in PSpice. The project setup and initial testing were completed.
-
-
-- Built the basic single-diode photovoltaic cell model in PSpice.
-- Added a photocurrent source and diode.
-- Performed DC sweep simulations.
-- Generated initial I-V plots.
-- Learned how to use simulation profiles and graph outputs in PSpice.
-
-Conclusion:
-Successfully created and simulated a basic photovoltaic cell model.
-
-- Added series resistance (Rs) and shunt resistance (Rsh) to the PV model.
-- Tested different resistance values and observed their effect on the circuit.
-- Connected a load resistor (RL) to create an output terminal.
-- Performed an irradiance sweep by varying photocurrent from 0.1 A to 1.0 A.
-- Observed output voltage increase from approximately 0.81 V to 0.96 V.
-
-Conclusion:
-The PV model responded correctly to increasing irradiance. Higher illumination produced higher output voltage.
-## Repository Structure
-
-```
-docs/
-    Engineering notes and project log
-pspice/
-    PSpice schematic files
-    Simulation files
-    Project files
-results/
-    Screenshots, plots, and analysis results
-```
-## Current Model
-Solar Cell Equivalent Circuit:
-```
-Photocurrent Source
-        ||
-        ||
-      Diode
-        ||
-       GND
-```
-This model serves as the foundation for future photovoltaic simulations.
-## Next Steps
-- Simulate varying irradiance levels
-- Generate solar-cell I-V curves
-- Add series and shunt resistance effects
-- Analyze power output
-- Design amplifier stage
-- Integrate photovoltaic source with amplifier load
-## Tools
-- PSpice
-- Git
-- GitHub
 ## Author
+
 Mishti Anurag Mishra
