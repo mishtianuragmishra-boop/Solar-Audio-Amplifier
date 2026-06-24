@@ -1,186 +1,130 @@
-# Solar Audio Amplifier
+# Solar-Powered Audio Amplifier Project
 
-A personal electronics and power-systems engineering project focused on designing a solar-powered audio amplifier from the ground up. The project combines photovoltaic modelling, power conditioning, energy conversion, and audio amplification using circuit simulation tools.
+## Overview
 
----
+This project aims to design and simulate a solar-powered audio amplifier using LTspice.
 
-## Project Overview
+The objective is to harvest electrical energy from a solar source, store and condition that energy, and use it to power a transistor-based audio amplifier capable of driving a small speaker.
 
-The objective is to design a complete low-power audio system powered by a photovoltaic source.
+The project is divided into three major sections:
 
-The project is divided into four major subsystems:
+1. Solar Cell Model
+2. Energy Storage and Conditioning
+3. Audio Amplifier and Speaker Output
 
-1. Photovoltaic Cell Modelling
-2. Power Conditioning and Voltage Conversion
-3. Audio Amplifier Design
-4. System Integration and Performance Analysis
+The long-term goal is to demonstrate that low-power solar energy can be converted, stored, amplified, and used for audio reproduction.
 
-All development is currently being performed through circuit simulation before hardware implementation.
 
----
+Current Issues
 
-## Current Progress
+Amplifier Biasing
 
-### Phase 1 – Photovoltaic Modelling ✅
+The amplifier section currently shows:
 
-Completed development of a photovoltaic equivalent circuit model using:
+* Extremely small collector currents
+* Nearly zero base current
+* No meaningful output power
 
-* Photocurrent source
-* Diode model
-* Series resistance (Rs)
-* Shunt resistance (Rsh)
-* Variable load resistance
+This indicates that:
 
-Activities completed:
+* Q1 and Q2 are not properly biased
+* The amplifier is effectively off
 
-* Built a basic single-diode solar-cell model
-* Performed DC sweep simulations
-* Generated I-V characteristics
-* Investigated effects of irradiance variation
-* Studied effects of series and shunt resistance
-* Verified expected photovoltaic behaviour
+Energy Source Realism
 
-Key observations:
+Several experimental energy-source configurations were tested:
 
-* Increased irradiance increased output voltage and current
-* Series resistance reduced output performance
-* Shunt resistance affected leakage behaviour
-* Simulated results matched expected solar-cell characteristics
+* Single current source
+* Multiple stacked current sources
+* Different supply arrangements
 
----
+Some configurations produced unrealistic simulation values and will be replaced with a more physically realistic harvesting model.
 
-### Phase 2 – Power Conditioning ✅
 
-Developed and validated a boost-converter stage intended to increase photovoltaic output voltage for downstream circuitry.
+Priority 1
 
-Converter topology:
+Debug transistor biasing:
 
-* Input source
-* Inductor
-* MOSFET switch
-* Schottky diode
-* Output capacitor
-* Load resistor
+* Verify Q1 operating point
+* Verify Q2 operating point
+* Establish stable collector current
+* Achieve measurable gain
 
-Activities completed:
+Priority 2
 
-* Initial design in PSpice
-* Migration to LTspice for debugging and validation
-* Replacement of generic switching components with realistic models
-* Verification of switching behaviour
-* Observation of boost-converter voltage step-up operation
-* Analysis of inductor current and output voltage response
+Verify amplifier independently:
 
-Simulation results demonstrated:
+* Test using a clean DC supply
+* Confirm speaker output
+* Measure voltage gain
 
-* Successful voltage boosting above source voltage
-* Expected switching waveforms
-* Proper energy transfer through the inductor-diode network
-* Stable converter operation after component adjustments
+Priority 3
 
----
+Reconnect harvesting stage:
 
-### Phase 3 – Audio Amplifier Design 🔄
+* Power amplifier from stored energy
+* Measure available power
+* Evaluate efficiency
 
-Planned work:
+Priority 4
 
-* Small-signal amplifier stage
-* Power amplification stage
-* Input coupling and filtering
-* Bias network design
-* Gain analysis
-* Frequency response characterization
+Optimize system:
 
----
+* Reduce losses
+* Improve energy storage
+* Investigate voltage regulation
+* Explore supercapacitor implementation
 
-### Phase 4 – System Integration ⏳
 
-Future work:
+Tools Used
 
-* Connect photovoltaic model to boost converter
-* Connect boost converter to amplifier stage
-* Evaluate overall efficiency
-* Investigate noise and ripple effects
-* Simulate varying irradiance conditions
-* Analyze real-world operating scenarios
+* LTspice
+* Manual operating-point analysis
+* DC sweep simulations
+* Transistor bias calculations
 
----
 
-## Simulation Tools
+Project Status
 
-### PSpice
+Current Status: In Development
 
-Used for:
+Progress Estimate:
 
-* Initial photovoltaic modelling
-* DC sweep analysis
-* Early-stage circuit development
+* Harvesting Section: ~70% complete
+* Amplifier Section: ~50% complete
+* System Integration: ~20% complete
 
-### LTspice
+Overall Project Completion: ~60%
 
-Used for:
 
-* Power electronics simulation
-* Boost converter validation
-* Switching waveform analysis
-* Circuit debugging
+Development Log
 
-### Git & GitHub
+Days 1–3:
 
-Used for:
+* LTspice setup
+* Component familiarization
+* Energy storage experiments
 
-* Version control
-* Engineering documentation
-* Progress tracking
-* Design archiving
+Days 4–6:
 
----
+* Harvesting circuit construction
+* Diode and capacitor integration
 
-## Repository Structure
+Days 7–8:
 
-```text
-docs/
-    Engineering notes
-    Daily progress logs
-    Design documentation
+* Amplifier design implementation
+* Speaker integration
 
-pspice/
-    PSpice schematics
-    Project files
-    Simulation profiles
+Days 9–10:
 
-ltspice/
-    LTspice schematics
-    Converter validation files
+* Operating-point debugging
+* Supply polarity investigation
+* Bias network tuning
 
-results/
-    Plots
-    Screenshots
-    Analysis figures
-```
+Next Milestone:
+Obtain a working amplified output signal from the transistor stage.
 
----
+##AUTHOR
+MISHTI ANURAG MISHRA
+* Obtain a working amplified output signal from the transistor stage.
 
-## Current Status
-
-| Subsystem                  | Status      |
-| -------------------------- | ----------- |
-| Solar Cell Model           | Complete    |
-| Irradiance Analysis        | Complete    |
-| PV Characterization        | Complete    |
-| Boost Converter Design     | Complete    |
-| Boost Converter Validation | Complete    |
-| Audio Amplifier Design     | In Progress |
-| System Integration         | Pending     |
-
----
-
-## Project Goal
-
-Design a fully simulated solar-powered audio amplifier system capable of converting photovoltaic energy into amplified audio output through an integrated power-conditioning stage.
-
----
-
-## Author
-
-Mishti Anurag Mishra
