@@ -1,130 +1,154 @@
-# Solar-Powered Audio Amplifier Project
+# Solar-Powered Two-Stage BJT Audio Amplifier
 
 ## Overview
 
-This project aims to design and simulate a solar-powered audio amplifier using LTspice.
+This project presents the design, simulation, and analysis of a solar-powered two-stage BJT audio amplifier using **LTspice**. The objective was to investigate whether a photovoltaic source could be used to power a transistor amplifier capable of amplifying an audio signal and driving a low-impedance speaker.
 
-The objective is to harvest electrical energy from a solar source, store and condition that energy, and use it to power a transistor-based audio amplifier capable of driving a small speaker.
+The project focuses on understanding transistor biasing, voltage amplification, current amplification, AC coupling, and systematic analog circuit debugging rather than producing a high-power commercial amplifier.
 
-The project is divided into three major sections:
+---
 
-1. Solar Cell Model
-2. Energy Storage and Conditioning
-3. Audio Amplifier and Speaker Output
+# Objectives
 
-The long-term goal is to demonstrate that low-power solar energy can be converted, stored, amplified, and used for audio reproduction.
+* Design a solar-powered analog amplifier.
+* Model a photovoltaic source using an equivalent circuit.
+* Implement a two-stage BJT amplifier.
+* Verify correct transistor biasing.
+* Amplify a 1 kHz audio signal.
+* Investigate the behaviour of the amplifier when driving an 8 Ω speaker.
+* Analyze the limitations of a single-transistor output stage.
 
+---
 
-Current Issues
+# Circuit Description
 
-Amplifier Biasing
+The amplifier consists of the following sections:
 
-The amplifier section currently shows:
+### Solar Source
 
-* Extremely small collector currents
-* Nearly zero base current
-* No meaningful output power
+* Photocurrent source
+* Diode equivalent model
+* Series resistance
+* Shunt resistance
 
-This indicates that:
+This provides the DC supply required to operate the amplifier.
 
-* Q1 and Q2 are not properly biased
-* The amplifier is effectively off
+### First Stage (Q1)
 
-Energy Source Realism
+A common-emitter amplifier using a BJT provides voltage gain.
 
-Several experimental energy-source configurations were tested:
+Functions:
 
-* Single current source
-* Multiple stacked current sources
-* Different supply arrangements
+* Signal amplification
+* DC bias stabilization
+* Initial voltage gain
 
-Some configurations produced unrealistic simulation values and will be replaced with a more physically realistic harvesting model.
+### Second Stage (Q2)
 
+An emitter follower acts as the output stage.
 
-Priority 1
+Functions:
 
-Debug transistor biasing:
+* Current amplification
+* Low output impedance
+* Speaker interface
 
-* Verify Q1 operating point
-* Verify Q2 operating point
-* Establish stable collector current
-* Achieve measurable gain
+### Output Coupling
 
-Priority 2
+A coupling capacitor isolates the speaker from DC while allowing AC audio signals to pass.
 
-Verify amplifier independently:
+---
 
-* Test using a clean DC supply
-* Confirm speaker output
-* Measure voltage gain
+# Simulation
 
-Priority 3
+All simulations were performed using **LTspice**.
 
-Reconnect harvesting stage:
+The following analyses were carried out:
 
-* Power amplifier from stored energy
-* Measure available power
-* Evaluate efficiency
+* DC Operating Point (.op)
+* Transient Analysis (.tran)
+* Waveform Observation
+* Component Optimization
 
-Priority 4
+---
 
-Optimize system:
+# Results
 
-* Reduce losses
-* Improve energy storage
-* Investigate voltage regulation
-* Explore supercapacitor implementation
+The completed circuit demonstrated:
 
+* Successful photovoltaic power modelling
+* Stable transistor biasing
+* Voltage amplification in the first stage
+* Current buffering in the second stage
+* Successful transfer of an AC signal to an 8 Ω load
 
-Tools Used
+During testing, numerous resistor values, transistor models, supply voltages, and coupling configurations were investigated to understand their effect on amplifier performance.
+
+The project also highlighted the importance of operating-point analysis before transient simulation and demonstrated the role of coupling capacitors in preventing DC current from reaching the speaker.
+
+---
+
+# Key Engineering Observations
+
+* Proper transistor biasing is essential for analog amplifier operation.
+* Common-emitter amplifiers provide voltage gain.
+* Emitter followers primarily provide current gain.
+* Coupling capacitors block DC while passing AC signals.
+* Operating-point analysis and transient analysis provide different but complementary information.
+* Low-impedance speakers require significantly more output current than a simple emitter follower can efficiently provide.
+
+---
+
+# Limitations
+
+The amplifier successfully amplified the input signal and delivered AC current to the speaker; however, the single-transistor emitter follower output stage was unable to efficiently drive an 8 Ω loudspeaker at high output power.
+
+Future improvements include:
+
+* Complementary push-pull output stage
+* Class-AB output stage
+* Darlington output stage
+* Improved power efficiency
+* PCB implementation
+* Hardware prototype using a real photovoltaic panel
+
+---
+
+# Skills Demonstrated
+
+* Analog circuit design
+* LTspice simulation
+* BJT biasing
+* Small-signal amplifier design
+* Solar-cell equivalent modelling
+* Operating-point analysis
+* Transient analysis
+* Waveform interpretation
+* Analog circuit debugging
+* Engineering documentation
+
+---
+
+# Tools Used
 
 * LTspice
-* Manual operating-point analysis
-* DC sweep simulations
-* Transistor bias calculations
+* Bipolar Junction Transistors (BC547B / 2N2222 during testing)
+* Equivalent Solar Cell Model
+* Passive Components (Resistors, Capacitors)
+* 8 Ω Speaker Load
 
+---
 
-Project Status
+# Lessons Learned
 
-Current Status: In Development
+This project demonstrated that designing an analog amplifier involves far more than assembling components. Correct biasing, operating-point verification, waveform interpretation, and iterative debugging were all critical to obtaining a functional circuit.
 
-Progress Estimate:
+The investigation also reinforced the distinction between voltage amplification and power amplification, illustrating why practical audio amplifiers employ dedicated output stages when driving low-impedance loads.
 
-* Harvesting Section: ~70% complete
-* Amplifier Section: ~50% complete
-* System Integration: ~20% complete
+---
 
-Overall Project Completion: ~60%
+# Author
 
-
-Development Log
-
-Days 1–3:
-
-* LTspice setup
-* Component familiarization
-* Energy storage experiments
-
-Days 4–6:
-
-* Harvesting circuit construction
-* Diode and capacitor integration
-
-Days 7–8:
-
-* Amplifier design implementation
-* Speaker integration
-
-Days 9–10:
-
-* Operating-point debugging
-* Supply polarity investigation
-* Bias network tuning
-
-Next Milestone:
-Obtain a working amplified output signal from the transistor stage.
-
-##AUTHOR
 MISHTI ANURAG MISHRA
-* Obtain a working amplified output signal from the transistor stage.
 
+Personal Analog Electronics Project – 2026
